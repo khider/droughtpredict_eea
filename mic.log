@@ -75,3 +75,28 @@ mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameter
 mic   github.py          INFO     Creating the git repository
 mic   github.py          INFO     Compressing code
 mic   github.py          INFO     Creating a new commit
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'github_repo_url', 'value': 'https://github.com/khider/droughtpredict_eea.git'}}
+mic   github.py          INFO     Creating a new version
+mic   github.py          DEBUG    New version: 20.11.1
+mic   github.py          INFO     Pushing changes to the server
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'version', 'value': '20.11.1'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'mint_component_url', 'value': 'https://raw.githubusercontent.com/khider/droughtpredict_eea/master/mint_component.zip'}}
+mic   github.py          INFO     Push complete: {'repository': 'https://github.com/khider/droughtpredict_eea.git', 'version': '20.11.1'}
+mic   docker.py          INFO     Publish docker image
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'docker_image', 'value': 'khider/droughtpredict_eea:20.11.1'}}
+mic   commands.py        ERROR    Upload failed: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/click_encapsulate/commands.py", line 692, in upload
+    model_configuration, profile)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/publisher/model_catalog.py", line 104, in publish_model_configuration
+    api_response, model_id, software_version_id = handle_existing_model(profile, api_response_mc, labels, model_cli)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/publisher/model_catalog.py", line 124, in handle_existing_model
+    labels = get_show_models_version(selected_model.has_version, software_version_cli)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/publisher/model_catalog.py", line 180, in get_show_models_version
+    labels = get_label_from_response([software_version_cli.get_one(obtain_id(i.id)) for i in resources])
+TypeError: 'NoneType' object is not iterable
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameters': {'mic_file': {'value': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'type': 'str'}, 'profile': {'value': 'default', 'type': 'str'}, 'model_configuration': {'value': True, 'type': 'bool'}, 'data_transformation': {'value': None, 'type': 'NoneType'}}}
+mic   github.py          INFO     Creating the git repository
+mic   github.py          INFO     Compressing code
+mic   github.py          INFO     Creating a new commit
