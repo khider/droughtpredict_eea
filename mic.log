@@ -125,3 +125,37 @@ mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameter
 mic   github.py          INFO     Creating the git repository
 mic   github.py          INFO     Compressing code
 mic   github.py          INFO     Creating a new commit
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'github_repo_url', 'value': 'https://github.com/khider/droughtpredict_eea.git'}}
+mic   github.py          INFO     Creating a new version
+mic   github.py          DEBUG    New version: 20.11.3
+mic   github.py          INFO     Pushing changes to the server
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'version', 'value': '20.11.3'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'mint_component_url', 'value': 'https://raw.githubusercontent.com/khider/droughtpredict_eea/master/mint_component.zip'}}
+mic   github.py          INFO     Push complete: {'repository': 'https://github.com/khider/droughtpredict_eea.git', 'version': '20.11.3'}
+mic   docker.py          INFO     Publish docker image
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'docker_image', 'value': 'khider/droughtpredict_eea:20.11.3'}}
+mic   commands.py        ERROR    Upload failed: 
+Traceback (most recent call last):
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/click/termui.py", line 129, in prompt_func
+    return f("")
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/click_encapsulate/commands.py", line 692, in upload
+    model_configuration, profile)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/publisher/model_catalog.py", line 106, in publish_model_configuration
+    api_response = create_new_model(model_cli, api_response_mc)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/mic/publisher/model_catalog.py", line 167, in create_new_model
+    version_description = click.prompt("A short description of the version")
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/click/termui.py", line 147, in prompt
+    value = prompt_func(prompt)
+  File "/Users/deborahkhider/opt/anaconda3/envs/daniel/lib/python3.7/site-packages/click/termui.py", line 136, in prompt_func
+    raise Abort()
+click.exceptions.Abort
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameters': {'mic_file': {'value': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'type': 'str'}, 'profile': {'value': 'default', 'type': 'str'}, 'model_configuration': {'value': True, 'type': 'bool'}, 'data_transformation': {'value': None, 'type': 'NoneType'}}}
+mic   github.py          INFO     Creating the git repository
+mic   github.py          INFO     Compressing code
+mic   github.py          INFO     Creating a new commit
