@@ -1,0 +1,21 @@
+{
+"data" :
+  {
+  "dataset_name" : "/tmp/mint/mic/executions/11_24_23_47_47/src/ECMWF_EA_SPI.nc"
+},
+"output" :
+  {
+  "fig" : "True"
+},
+"time" :
+  {
+  "lead_time" : "4",
+  "forecast" : "True",
+  "hindcast_start" : "2020-01-01"
+},
+"spatial" :
+  {
+  "global" : "True",
+  "bounding_box": "[23,48,3,15]"
+}
+}

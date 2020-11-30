@@ -1,0 +1,30 @@
+#!/bin/bash
+set +x
+set -e
+. .colors.sh
+
+BASEDIR=$PWD
+. $BASEDIR/io.sh 1 1 2 "$@"
+CURDIR=`pwd`
+## INPUTS VARIABLES
+ecmwf_ea_spi_nc=${INPUTS1}
+
+
+## PARAMETERS VARIABLES
+lead_time=${PARAMS1}
+
+
+set -xe
+
+####### WRITE YOUR INVOCATION LINE AFTER THIS COMMENT
+
+    
+pushd .
+python DroughtPred.py config.json
+popd
+
+set +x
+echo -e "$(c G)[success] The model has exited with code SUCCESS"
+####### WRITE YOUR INVOCATION LINE BEFORE THIS COMMENT
+cd $BASEDIR
+. $BASEDIR/output.sh

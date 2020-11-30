@@ -1,0 +1,46 @@
+step: 2
+name: droughtpredict_eea
+docker_image: droughtpredict_eea:latest
+framework: !!python/object/apply:mic.constants.Framework
+- !!python/tuple
+  - general
+  - mintproject/generic:latest
+container_name: droughtpredict_eea_9f0291b3
+configs:
+  config_json:
+    path: config.json
+    format: json
+# Add a default value and type to any automatically generated parameters
+# It is also recommended you add a descriptions to your parameters
+parameters:
+  lead_time:
+    default_value: 4
+    description: Lead time for the forecast in month. Between 1 and 4
+    type: int
+inputs:
+  ecmwf_ea_spi_nc:
+    path: ECMWF_EA_SPI.nc
+    format: nc
+code_files:
+  droughtpred_py:
+    path: DroughtPred.py
+    format: py
+  threelayerCNN_0400-01-01_2100-12-31_1_pt:
+    path: threelayerCNN_0400-01-01_2100-12-31_1.pt
+    format: pt
+  threelayerCNN_0400-01-01_2100-12-31_2_pt:
+    path: threelayerCNN_0400-01-01_2100-12-31_2.pt
+    format: pt
+  threelayerCNN_0400-01-01_2100-12-31_3_pt:
+    path: threelayerCNN_0400-01-01_2100-12-31_3.pt
+    format: pt
+  threelayerCNN_0400-01-01_2100-12-31_4_pt:
+    path: threelayerCNN_0400-01-01_2100-12-31_4.pt
+    format: pt
+outputs:
+  results_nc:
+    path: results/results.nc
+    format: nc
+  results_mp4:
+    path: results/results.mp4
+    format: mp4

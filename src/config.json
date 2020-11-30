@@ -1,0 +1,21 @@
+{
+"data" :
+  {
+  "dataset_name" : "${ecmwf_ea_spi_nc}"
+},
+"output" :
+  {
+  "fig" : "True"
+},
+"time" :
+  {
+  "lead_time" : "${lead_time}",
+  "forecast" : "True",
+  "hindcast_start" : "2020-01-01"
+},
+"spatial" :
+  {
+  "global" : "True",
+  "bounding_box": "[23,48,3,15]"
+}
+}

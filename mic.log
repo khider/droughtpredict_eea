@@ -1,0 +1,77 @@
+mic   _utils.py          INFO     Log file created
+mic   _utils.py          INFO     OS: {'name': 'Darwin', 'data': {'version': 'Darwin Kernel Version 19.6.0: Thu Jun 18 20:49:00 PDT 2020; root:xnu-6153.141.1~1/RELEASE_X86_64', 'release': '19.6.0', 'platform': 'Darwin-19.6.0-x86_64-i386-64bit'}}
+mic   _utils.py          INFO     MIC Version: 1.3.4
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'start', 'command_parameters': {'name': {'value': 'droughtpredict_eea', 'type': 'str'}, 'image': {'value': 'droughtml', 'type': 'str'}}}
+mic   initialization.py  DEBUG    OS name: darwin
+mic   docker.py          INFO     Downloading and building base docker image
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'name', 'value': 'droughtpredict_eea'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'docker_image', 'value': 'droughtpredict_eea:latest'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'framework', 'value': <Framework.GENERIC: ('general', 'mintproject/generic:latest')>}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'data': {'key': 'container_name', 'value': 'droughtpredict_eea_9f0291b3'}}
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'trace', 'command_parameters': {'invocation_command': {'value': ('python', 'DroughtPred.py', 'config.json'), 'type': 'tuple'}, 'continu': {'value': None, 'type': 'NoneType'}, 'overwrite': {'value': None, 'type': 'NoneType'}}}
+mic   commands.py        DEBUG    Append mode: None
+mic   commands.py        INFO     trace done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'configs', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}, 'configuration_files': {'value': ('/tmp/mint/config.json',), 'type': 'tuple'}, 'auto_param': {'value': True, 'type': 'bool'}}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'configs', 'value': {'config_json': {'path': 'config.json', 'format': 'json'}}}}
+mic   commands.py        INFO     Added config file: /tmp/mint/config.json
+mic   config_yaml.py     INFO     Automatically adding parameter from config: "spi_reanalysis"
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'parameters', 'value': {'spi_reanalysis': {'default_value': 0, 'description': '', 'type': ''}}}}
+mic   config_yaml.py     INFO     Automatically adding parameter from config: "lead_time"
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'parameters', 'value': {'spi_reanalysis': {'default_value': 0, 'description': '', 'type': ''}, 'lead_time': {'default_value': 0, 'description': '', 'type': ''}}}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'step', 'value': 2}}
+mic   commands.py        INFO     configs done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'inputs', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}, 'custom_inputs': {'value': (), 'type': 'tuple'}}}
+mic   commands.py        DEBUG    Inputs found from reprozip: ['/tmp/mint/results', '/tmp/mint/threelayerCNN_0400-01-01_2100-12-31_1.pt', '/tmp/mint/threelayerCNN_0400-01-01_2100-12-31_3.pt', '/tmp/mint/threelayerCNN_0400-01-01_2100-12-31_2.pt', '/tmp/mint/ECMWF_EA_SPI.nc', '/tmp/mint/DroughtPred.py', '/tmp/mint/figures', '/tmp/mint/threelayerCNN_0400-01-01_2100-12-31_4.pt', '/tmp/mint/config.json']
+mic   reprozip.py        DEBUG    Adding executable: DroughtPred.py
+mic   commands.py        DEBUG    code files found from reprozip: ['/tmp/mint/DroughtPred.py']
+mic   commands.py        INFO     Compressing the input directory (results)
+mic   commands.py        INFO     Input added: results
+mic   commands.py        INFO     Input added: threelayerCNN_0400-01-01_2100-12-31_1.pt
+mic   commands.py        INFO     Input added: threelayerCNN_0400-01-01_2100-12-31_3.pt
+mic   commands.py        INFO     Input added: threelayerCNN_0400-01-01_2100-12-31_2.pt
+mic   commands.py        INFO     Input added: ECMWF_EA_SPI.nc
+mic   commands.py        INFO     Ignoring the config as an input: /tmp/mint/DroughtPred.py
+mic   commands.py        INFO     Compressing the input directory (figures)
+mic   commands.py        INFO     Input added: figures
+mic   commands.py        INFO     Input added: threelayerCNN_0400-01-01_2100-12-31_4.pt
+mic   commands.py        INFO     Ignoring the config as an input: /tmp/mint/config.json
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'inputs', 'value': {'results_zip': {'path': 'results.zip', 'format': 'zip'}, 'threelayercnn_0400-01-01_2100-12-31_1_pt': {'path': 'threelayerCNN_0400-01-01_2100-12-31_1.pt', 'format': 'pt'}, 'threelayercnn_0400-01-01_2100-12-31_3_pt': {'path': 'threelayerCNN_0400-01-01_2100-12-31_3.pt', 'format': 'pt'}, 'threelayercnn_0400-01-01_2100-12-31_2_pt': {'path': 'threelayerCNN_0400-01-01_2100-12-31_2.pt', 'format': 'pt'}, 'ecmwf_ea_spi_nc': {'path': 'ECMWF_EA_SPI.nc', 'format': 'nc'}, 'figures_zip': {'path': 'figures.zip', 'format': 'zip'}, 'threelayercnn_0400-01-01_2100-12-31_4_pt': {'path': 'threelayerCNN_0400-01-01_2100-12-31_4.pt', 'format': 'pt'}}}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'code_files', 'value': {'droughtpred_py': {'path': 'DroughtPred.py', 'format': 'py'}}}}
+mic   commands.py        INFO     inputs done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'outputs', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}, 'custom_outputs': {'value': (), 'type': 'tuple'}}}
+mic   commands.py        DEBUG    Outputs found from reprozip: ['/tmp/mint/figures/spi_t1.jpeg', '/tmp/mint/results/results.nc', '/tmp/mint/figures/spi_t2.jpeg', '/tmp/mint/figures/spi_t0.jpeg', '/tmp/mint/results/results.mp4', '/tmp/mint/figures/spi_t3.jpeg']
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'outputs', 'value': {'spi_t1_jpeg': {'path': 'figures/spi_t1.jpeg', 'format': 'jpeg'}, 'results_nc': {'path': 'results/results.nc', 'format': 'nc'}, 'spi_t2_jpeg': {'path': 'figures/spi_t2.jpeg', 'format': 'jpeg'}, 'spi_t0_jpeg': {'path': 'figures/spi_t0.jpeg', 'format': 'jpeg'}, 'results_mp4': {'path': 'results/results.mp4', 'format': 'mp4'}, 'spi_t3_jpeg': {'path': 'figures/spi_t3.jpeg', 'format': 'jpeg'}}}}
+mic   commands.py        INFO     outputs done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'wrapper', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}}}
+mic   commands.py        INFO     Generating wrapper code
+mic   reprozip.py        DEBUG    Pre runner code: ''
+mic   reprozip.py        DEBUG    Runner code: '\npushd .\npython DroughtPred.py config.json\npopd'
+mic   initialization.py  DEBUG    run file rendered
+mic   initialization.py  DEBUG    io file rendered
+mic   commands.py        INFO     wrapper done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'wrapper', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}}}
+mic   commands.py        INFO     Generating wrapper code
+mic   reprozip.py        DEBUG    Pre runner code: ''
+mic   reprozip.py        DEBUG    Runner code: '\npushd .\npython DroughtPred.py config.json\npopd'
+mic   initialization.py  DEBUG    run file rendered
+mic   initialization.py  DEBUG    io file rendered
+mic   commands.py        INFO     wrapper done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'run', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}}}
+mic   executor.py        INFO     Running: ./run   -i1 /tmp/mint/mic/executions/11_24_23_47_47/src/ECMWF_EA_SPI.nc  -o1 results_nc.nc -o2 results_mp4.mp4  -p1 4
+mic   executor.py        DEBUG    exe_arr: ['./run', '-i1', '/tmp/mint/mic/executions/11_24_23_47_47/src/ECMWF_EA_SPI.nc', '-o1', 'results_nc.nc', '-o2', 'results_mp4.mp4', '-p1', '4']
+mic   commands.py        INFO     Run passed
+mic   commands.py        INFO     run done
+mic   commands.py        INFO     start done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameters': {'mic_file': {'value': '/Users/deborahkhider/Documents/MINT/Drought Prediction/ForMIC/mic/mic.yaml', 'type': 'str'}, 'profile': {'value': 'default', 'type': 'str'}, 'model_configuration': {'value': True, 'type': 'bool'}, 'data_transformation': {'value': None, 'type': 'NoneType'}}}
+mic   github.py          INFO     Creating the git repository
+mic   github.py          INFO     Compressing code
+mic   github.py          INFO     Creating a new commit
