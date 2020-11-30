@@ -1,6 +1,6 @@
 step: 2
 name: droughtpredict_eea
-docker_image: khider/droughtpredict_eea:20.11.1
+docker_image: khider/droughtpredict_eea:20.11.2
 framework: !!python/object/apply:mic.constants.Framework
 - !!python/tuple
   - general
@@ -45,5 +45,5 @@ outputs:
     path: results/results.mp4
     format: mp4
 github_repo_url: https://github.com/khider/droughtpredict_eea.git
-version: 20.11.1
+version: 20.11.2
 mint_component_url: https://raw.githubusercontent.com/khider/droughtpredict_eea/master/mint_component.zip
